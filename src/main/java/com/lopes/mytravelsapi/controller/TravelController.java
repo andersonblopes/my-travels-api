@@ -46,7 +46,7 @@ public class TravelController {
      */
     @GetMapping
     public ResponseEntity<Page<Travel>> listAllTravels(@PageableDefault(page = 0, size = 2, sort = "id", direction = Sort.Direction.ASC) Pageable pageable) {
-        return new ResponseEntity<Page<Travel>>(travelRepository.findAll(pageable), HttpStatus.OK);
+        return new ResponseEntity<>(travelRepository.findAll(pageable), HttpStatus.OK);
     }
 
     /**
