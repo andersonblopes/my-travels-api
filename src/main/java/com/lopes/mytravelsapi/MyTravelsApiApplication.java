@@ -10,14 +10,28 @@ import org.springframework.context.annotation.Bean;
 import java.time.LocalDate;
 import java.util.stream.Stream;
 
+/**
+ * The type My travels api application.
+ */
 @SpringBootApplication
 public class MyTravelsApiApplication {
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         SpringApplication.run(MyTravelsApiApplication.class, args);
     }
 
 
+    /**
+     * Init command line runner.
+     *
+     * @param travelRepository the travel repository
+     * @return the command line runner
+     */
     @Bean
     CommandLineRunner init(TravelRepository travelRepository) {
         return args -> {

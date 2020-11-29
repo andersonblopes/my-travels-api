@@ -13,23 +13,11 @@ import java.util.Objects;
 @Entity
 public class Travel {
 
-    /**
-     * The Id.
-     */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    /**
-     * The Description.
-     */
     private String description;
-    /**
-     * The Date.
-     */
     private LocalDate date;
-    /**
-     * The Duration.
-     */
     private Integer duration;
 
     /**
@@ -124,12 +112,6 @@ public class Travel {
         this.duration = duration;
     }
 
-    /**
-     * Equals boolean.
-     *
-     * @param o the o
-     * @return the boolean
-     */
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -142,21 +124,11 @@ public class Travel {
         return id.equals(travel.id);
     }
 
-    /**
-     * Hash code int.
-     *
-     * @return the int
-     */
     @Override
     public int hashCode() {
         return Objects.hash(id);
     }
 
-    /**
-     * To string string.
-     *
-     * @return the string
-     */
     @Override
     public String toString() {
         return "Travel{" +
